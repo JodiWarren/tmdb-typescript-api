@@ -1,4 +1,6 @@
-export class TvShow {
+import {MediaType} from "./mediatype";
+
+export interface TvShow {
 	id: number;
 	name: string;
 	original_name: string;
@@ -14,6 +16,6 @@ export class TvShow {
 	first_air_date: Date;
 }
 
-export class TvShowMulti extends TvShow {
-	media_type: 'tv'
+export interface TvShowMulti extends TvShow {
+	media_type: MediaType.Person;
 }

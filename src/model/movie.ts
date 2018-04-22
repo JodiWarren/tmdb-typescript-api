@@ -1,4 +1,6 @@
-export class Movie {
+import {MediaType} from "./mediatype";
+
+export interface Movie {
 	id: number;
 	title: string;
 	original_title: string;
@@ -15,6 +17,6 @@ export class Movie {
 	vote_average: number;
 }
 
-export class MovieMulti extends Movie {
-	media_type: "movie";
+export interface MovieMulti extends Movie {
+	media_type: MediaType.Movie;
 }

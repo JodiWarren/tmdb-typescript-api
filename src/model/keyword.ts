@@ -1,4 +1,4 @@
-export class Keyword {
+export interface Keyword {
 	id: number;
 	name: string;
 }

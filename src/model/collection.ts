@@ -1,4 +1,4 @@
-export class Collection {
+export interface Collection {
 	id: number;
 	backdrop_path: string;
 	name: string;

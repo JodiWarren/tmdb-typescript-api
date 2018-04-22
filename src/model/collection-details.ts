@@ -1,6 +1,6 @@
 import { Collection } from './collection';
 import { Movie } from './movie';
-export class CollectionDetails extends Collection {
+export interface CollectionDetails extends Collection {
 	overview: string;
 	parts: Movie[];
 }

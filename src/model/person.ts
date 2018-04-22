@@ -1,7 +1,8 @@
 import {MovieMulti} from './movie';
 import {TvShowMulti} from './tv-show';
+import {MediaType} from "./mediatype";
 
-export class Person {
+export interface Person {
 	id: number;
 	name: string;
 	profile_path: string;
@@ -10,6 +11,6 @@ export class Person {
 	known_for: Array<MovieMulti | TvShowMulti>;
 }
 
-export class PersonMulti extends Person{
-	media_type: "person";
+export interface PersonMulti extends Person{
+	media_type: MediaType.Person;
 }

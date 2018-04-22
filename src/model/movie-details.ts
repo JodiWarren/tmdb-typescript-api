@@ -5,7 +5,7 @@ import { Company } from './company';
 import { Country } from './country';
 import { Language } from './language';
 
-export class MovieDetails extends Movie {
+export interface MovieDetails extends Movie {
 	belongs_to_collection: Collection;
 	budget: number;
 	genres: Genre[];

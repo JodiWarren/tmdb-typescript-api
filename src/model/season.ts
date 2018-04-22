@@ -1,4 +1,4 @@
-export class Season {
+export interface Season {
 	id: number;
 	episode_count: number;
 	poster_path: string;

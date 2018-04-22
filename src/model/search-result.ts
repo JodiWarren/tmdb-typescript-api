@@ -1,5 +1,4 @@
-
-export class SearchResult<T> {
+export interface SearchResult<T> {
 	page: number;
 	results: Array<T>;
 	total_results: number;
