@@ -1,5 +1,3 @@
-import {MediaType} from "./mediatype";
-
 export interface Movie {
 	id: number;
 	title: string;
@@ -18,5 +16,5 @@ export interface Movie {
 }
 
 export interface MovieMulti extends Movie {
-	media_type: MediaType.Movie;
+	media_type: 'movie';
 }

@@ -1,6 +1,5 @@
-import {MovieMulti} from './movie';
-import {TvShowMulti} from './tv-show';
-import {MediaType} from "./mediatype";
+import {MovieMulti} from "./movie";
+import {TvShowMulti} from "./tv-show";
 
 export interface Person {
 	id: number;
@@ -12,5 +11,5 @@ export interface Person {
 }
 
 export interface PersonMulti extends Person{
-	media_type: MediaType.Person;
+	media_type: 'person';
 }

@@ -1,5 +1,3 @@
-import {MediaType} from "./mediatype";
-
 export interface TvShow {
 	id: number;
 	name: string;
@@ -17,5 +15,5 @@ export interface TvShow {
 }
 
 export interface TvShowMulti extends TvShow {
-	media_type: MediaType.Person;
+	media_type: 'tv';
 }

@@ -1,6 +1,6 @@
 {
   "name": "@jodi/tmdb-typescript-api",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "TMDB's API Wrapper made with Typescript and RxJS ",
   "homepage": "https://github.com/xusoo/tmdb-typescript-api",
   "main": "dist/index.js",
