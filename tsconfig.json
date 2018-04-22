@@ -3,6 +3,7 @@
     "module": "ES2015",
     "target": "es5",
     "declaration": true,
+    "lib": ["es6", "dom"],
     "outDir": "dist",
     "moduleResolution": "node",
     "sourceMap": true,

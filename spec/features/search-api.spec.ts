@@ -2,14 +2,14 @@ import { from } from 'rxjs';
 
 import {
     TmdbApi,
-	Helper,
+    Helper,
     Movie,
     Company,
     Collection,
     Keyword,
     Person,
     TvShow,
-    SearchResult,
+    SearchResult, TvShowMulti, MovieMulti, PersonMulti,
 } from '../../src';
 
 describe('search feature', () => {
@@ -192,7 +192,7 @@ describe('search feature', () => {
 
 		spyAjaxCall(() => 'john-multi-response.json');
 
-		api.search.multi('john').subscribe((search: SearchResult<Movie | TvShow | Person>) => {
+		api.search.multi('john').subscribe((search: SearchResult<MovieMulti | TvShowMulti | PersonMulti>) => {
 			expect(<any>search.page).toEqual(1);
 
 			if (mockData) {
@@ -201,7 +201,7 @@ describe('search feature', () => {
 				expect(<any>search.results.length).toEqual(20);
 			}
 
-			search.results.forEach((item: Movie | TvShow | Person) => {
+			search.results.forEach((item: MovieMulti | TvShowMulti | PersonMulti) => {
 				expect(item['media_type']).toMatch(/movie|tv|person/);
 			});
 
