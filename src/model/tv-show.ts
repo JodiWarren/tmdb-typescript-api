@@ -13,3 +13,7 @@ export class TvShow {
 	vote_count: number;
 	first_air_date: Date;
 }
+
+export class TvShowMulti extends TvShow {
+	media_type: 'tv'
+}

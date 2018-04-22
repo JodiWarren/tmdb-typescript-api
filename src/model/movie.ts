@@ -14,3 +14,7 @@ export class Movie {
 	video: boolean;
 	vote_average: number;
 }
+
+export class MovieMulti extends Movie {
+	media_type: "movie";
+}

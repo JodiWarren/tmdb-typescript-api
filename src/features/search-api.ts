@@ -4,15 +4,19 @@ import { Context } from '../context';
 import {
     SearchResult,
     Movie,
+    MovieMulti,
     Company,
     Collection,
     Keyword,
     TvShow,
+    TvShowMulti,
     Person,
+    PersonMulti
 } from '../';
 import { Helper } from '../helper';
 
 export class SearchApi {
+
 
 	constructor(private context: Context) {
 	}
@@ -44,7 +48,7 @@ export class SearchApi {
 		return Helper.ajaxObservable(this.url('movie', query, page));
 	}
 
-	multi(query: string, page = 1): Observable<SearchResult<Movie | TvShow | Person>> {
+	multi(query: string, page = 1): Observable<SearchResult<MovieMulti | TvShowMulti | PersonMulti>> {
 		return Helper.ajaxObservable(this.url('multi', query, page));
 	}
 
