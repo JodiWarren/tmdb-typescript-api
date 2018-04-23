@@ -4,6 +4,7 @@ import { MoviesApi } from './features/movies-api';
 import { CollectionsApi } from './features/collections-api';
 import { PeopleApi } from './features/people-api';
 import { TvApi } from './features/tv-api';
+import {ConfigurationApi} from "./features/config-api";
 
 export class TmdbApi {
 
@@ -14,11 +15,16 @@ export class TmdbApi {
 	private _collections: CollectionsApi;
 	private _people: PeopleApi;
 	private _tvshows: TvApi;
+	private _configuration: ConfigurationApi;
 
 	constructor(apiKey: string, language = 'en') {
 		this.context = new Context();
 		this.context.apiKey = apiKey;
 		this.context.language = language;
+	}
+
+	get configuration() {
+        return this._configuration || (this._configuration = new ConfigurationApi(this.context));
 	}
 
 	get search() {

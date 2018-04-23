@@ -4,6 +4,7 @@ import {
 	MoviesApi,
 	PeopleApi,
 	CollectionsApi,
+	ConfigurationApi,
 	TvApi,
 } from '../src';
 
@@ -15,8 +16,9 @@ describe('basic usage', () => {
 		const api = new TmdbApi(apiKey, 'es');
 		expect(api.context.apiKey).toEqual(apiKey);
 		expect(api.context.language).toEqual('es');
-		expect(api.search).toEqual(jasmine.any(SearchApi));
-		expect(api.movies).toEqual(jasmine.any(MoviesApi));
+        expect(api.configuration).toEqual(jasmine.any(ConfigurationApi));
+        expect(api.search).toEqual(jasmine.any(SearchApi));
+        expect(api.movies).toEqual(jasmine.any(MoviesApi));
 		expect(api.collections).toEqual(jasmine.any(CollectionsApi));
 		expect(api.people).toEqual(jasmine.any(PeopleApi));
 		expect(api.tvshows).toEqual(jasmine.any(TvApi));
