@@ -15,7 +15,7 @@ export class ConfigurationApi {
      */
 
     configuration(): Observable<ConfigurationResult> {
-        const url = `${this.context.baseUrl}/configuration/?api_key=${this.context.apiKey}`;
+        const url = `${this.context.baseUrl}/configuration?api_key=${this.context.apiKey}`;
         return Helper.ajaxObservable(url);
     }
 
